@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renew+ Training &amp; Knowledge Portal</title>
+<meta name="description" content="Training manuals, SOPs, patient aftercare guides and training videos for Renew Plus Hair & Skin Care.">
+<link rel="icon" href="assets/logos/renew-plus.png">
+<link rel="canonical" href="__SITE__">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Renew+ Hair &amp; Skin Care">
+<meta property="og:title" content="Renew+ Training &amp; Knowledge Portal">
+<meta property="og:description" content="Training manuals, SOPs, patient aftercare guides and training videos for Renew Plus Hair &amp; Skin Care.">
+<meta property="og:url" content="__SITE__">
+<meta property="og:image" content="__SITE__assets/share-thumbnail.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="__SITE__assets/share-thumbnail.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g:#0d4a3a;--g2:#16a36b;--blue:#1769b5;--gold:#b8893a;--ink:#1c2a26;--mut:#5d6b67;--line:#e1e8e6;--bg:#f5f8f7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:var(--blue)}
+img{max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+/* header */
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.hbar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:84px}
+.hbar .rp{height:64px}
+.hbar .rg{height:46px}
+.hbar nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.hbar nav a{text-decoration:none;color:var(--mut);font-weight:600;font-size:14px;padding:8px 12px;border-radius:8px}
+.hbar nav a:hover{background:#eef5f2;color:var(--g)}
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(100deg,#0d4a3a 0%,#11646e 50%,#1271b9 100%);color:#fff}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,rgba(184,137,58,.2),#b8893a 45%,#d8b06a)}
+.hero .wrap{padding-top:56px;padding-bottom:64px}
+.kick{font-size:13px;font-weight:700;letter-spacing:4px;color:#a6e6c8;text-transform:uppercase}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.1;margin:10px 0 12px;font-weight:800;max-width:760px}
+.hero p{font-size:18px;max-width:640px;opacity:.92;margin:0 0 26px}
+.stats{display:flex;gap:14px;flex-wrap:wrap}
+.stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:12px 18px;min-width:130px}
+.stat b{display:block;font-size:26px;line-height:1.1}
+.stat span{font-size:13px;opacity:.9}
+/* filters */
+.bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:34px 0 18px}
+.bar h2{margin:0;font-size:26px;color:var(--g)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line);background:#fff;color:var(--mut);font:inherit;font-weight:600;font-size:14px;padding:9px 16px;border-radius:999px;cursor:pointer;min-height:44px}
+.chip[aria-pressed="true"]{background:var(--g);border-color:var(--g);color:#fff}
+.search{flex:1;min-width:220px;max-width:340px}
+.search input{width:100%;font:inherit;padding:11px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;min-height:44px}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:20px;margin-bottom:40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.media{display:flex;gap:0;background:#eef3f1;border-bottom:1px solid var(--line);height:190px}
+.media .doc{flex:0 0 38%;display:flex;align-items:center;justify-content:center;padding:14px;background:#f7faf9}
+.media .doc img{max-height:162px;box-shadow:0 4px 14px rgba(0,0,0,.12);border-radius:3px}
+.media .vid{flex:1;position:relative;cursor:pointer;border:0;padding:0;background:#000;display:block}
+.media .vid img{width:100%;height:100%;object-fit:cover;opacity:.92;display:block}
+.media .vid .play{position:absolute;inset:0;margin:auto;width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.media .vid .dur{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.72);color:#fff;font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px}
+.media.only .doc{flex:1}
+.cbody{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tag{align-self:flex-start;font-size:11.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.t-staff{background:#e6f0fa;color:#1769b5}.t-ops{background:#e5f5ee;color:#0f7a52}.t-patient{background:#fbf1e1;color:#8a6420}.t-clinical{background:#efeaf8;color:#5b3fa0}
+.card h3{margin:2px 0 0;font-size:19px;color:var(--g);line-height:1.3}
+.card p{margin:0;color:var(--mut);font-size:14.5px;flex:1}
+.meta{font-size:13px;color:var(--mut);display:flex;gap:14px;flex-wrap:wrap}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-weight:600;font-size:14px;padding:10px 15px;border-radius:10px;min-height:44px;border:1.5px solid transparent;cursor:pointer;font-family:inherit}
+.btn.p{background:var(--g);color:#fff}.btn.p:hover{background:#0a3a2e}
+.btn.s{background:#fff;color:var(--g);border-color:#cfe0da}.btn.s:hover{background:#eef5f2}
+.btn.v{background:var(--blue);color:#fff}.btn.v:hover{background:#125a9c}
+.empty{display:none;text-align:center;color:var(--mut);padding:40px 0}
+/* about */
+.about{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-bottom:44px}
+.about h3{margin:0 0 6px;color:var(--g);font-size:17px}
+.about p{margin:0;color:var(--mut);font-size:14.5px}
+/* footer */
+footer{background:#fff;border-top:1px solid var(--line)}
+.fgrid{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:30px 0}
+.flogos{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.flogos .rp{height:70px}.flogos .rg{height:50px}
+.partner{display:flex;align-items:center;gap:14px;border:1.5px solid var(--line);border-radius:14px;padding:10px 16px}
+.partner small{display:block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--mut);text-transform:uppercase}
+.partner b{font-size:15px;color:var(--ink)}
+.partner img{height:56px}
+.copy{border-top:1px solid var(--line);padding:16px 0 26px;font-size:13px;color:var(--mut);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+/* page index */
+details.idx{border-top:1px solid var(--line);margin-top:8px;padding-top:8px}
+details.idx summary{cursor:pointer;font-weight:700;color:var(--g);font-size:14px;list-style:none;display:flex;align-items:center;gap:6px;min-height:36px}
+details.idx summary::-webkit-details-marker{display:none}
+details.idx summary:before{content:"\25B8";transition:transform .15s}
+details.idx[open] summary:before{transform:rotate(90deg)}
+.strip{display:flex;gap:10px;overflow-x:auto;padding:8px 2px 10px;scroll-snap-type:x mandatory}
+.pg{flex:0 0 96px;text-decoration:none;color:var(--ink);scroll-snap-align:start}
+.pg img{width:96px;height:136px;object-fit:cover;object-position:top;border:1px solid var(--line);border-radius:6px;display:block;background:#fff}
+.pg:hover img{border-color:var(--g2);box-shadow:0 3px 10px rgba(0,0,0,.12)}
+.pg b{display:block;font-size:11px;color:var(--blue);margin-top:4px}
+.pg span{display:block;font-size:11.5px;line-height:1.3;color:var(--mut)}
+/* all files table */
+.files{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:44px}
+.files h2{margin:0;padding:20px 22px 6px;color:var(--g);font-size:22px}
+.files p{margin:0;padding:0 22px 12px;color:var(--mut);font-size:14px}
+.tw{overflow-x:auto}
+.files table{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
+.files th{background:#0d4a3a;color:#fff;text-align:left;padding:10px 14px;font-weight:600}
+.files td{padding:10px 14px;border-bottom:1px solid var(--line)}
+.files tr:nth-child(even) td{background:#f7faf9}
+.files td a{font-weight:600}
+.dno{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;font-weight:700;color:#0d4a3a;background:#eef5f2;border:1px solid #cfe3da;border-radius:6px;padding:2px 7px;white-space:nowrap}
+.nos{display:flex;gap:6px;flex-wrap:wrap}
+.vc{flex:0 0 150px;text-decoration:none;color:var(--ink);scroll-snap-align:start;background:none;border:0;padding:0;text-align:left;cursor:pointer;font:inherit}
+.vc img{width:150px;height:84px;object-fit:cover;border:1px solid var(--line);border-radius:6px;display:block}
+.vc:hover img{border-color:var(--blue);box-shadow:0 3px 10px rgba(0,0,0,.12)}
+.vc b{display:block;font-size:11px;color:var(--blue);margin-top:4px}
+.vc span{display:block;font-size:11.5px;line-height:1.3;color:var(--mut)}
+/* modal */
+dialog{border:0;padding:0;border-radius:16px;width:min(1000px,94vw);background:#000;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+dialog::backdrop{background:rgba(5,20,16,.78)}
+dialog video{width:100%;display:block;max-height:80vh;background:#000}
+.dhead{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#0d4a3a;color:#fff;padding:10px 14px}
+.dhead b{font-size:15px}
+.x{background:rgba(255,255,255,.15);border:0;color:#fff;font-size:22px;width:44px;height:44px;border-radius:10px;cursor:pointer}
+@media (max-width:760px){
+  .hbar{height:auto;padding:10px 0;flex-wrap:wrap}
+  .hbar nav{order:3;width:100%;justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}
+  .hbar .rp{height:50px}.hbar .rg{height:36px}
+  .grid{grid-template-columns:1fr}
+  .media{height:170px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hbar">
+    <img class="rp" src="assets/logos/renew-plus.png" alt="Renew+ Hair and Skin Care">
+    <nav aria-label="Sections">
+      <a href="#library">Library</a>
+      <a href="#library" data-jump="staff">Staff Training</a>
+      <a href="#library" data-jump="patient">Patient Care</a>
+      <a href="#files">All downloads</a>
+      <a href="#about">How to use</a>
+    </nav>
+    <img class="rg" src="assets/logos/renew-group.png" alt="Renew Group of Companies">
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kick">Renew+ Hair &amp; Skin Care</div>
+    <h1>Training &amp; Knowledge Portal</h1>
+    <p>Manuals, SOPs, patient aftercare guides and training videos for every Renew+ branch — in one place, on any device.</p>
+    <div class="stats">
+      <div class="stat"><b id="nDocs">6</b><span>Guides &amp; handbooks</span></div>
+      <div class="stat"><b id="nVids">5</b><span>Training videos</span></div>
+      <div class="stat"><b>All</b><span>Branches &amp; roles</span></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap" id="library">
+  <div class="bar">
+    <h2>Library</h2>
+    <div class="chips" role="group" aria-label="Filter by category">
+      <button class="chip" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" data-f="staff" aria-pressed="false">Staff Training</button>
+      <button class="chip" data-f="ops" aria-pressed="false">Clinic Operations</button>
+      <button class="chip" data-f="clinical" aria-pressed="false">Clinical Documentation</button>
+      <button class="chip" data-f="patient" aria-pressed="false">Patient Care</button>
+    </div>
+    <label class="search"><span class="sr" style="position:absolute;left:-9999px">Search</span><input id="q" type="search" placeholder="Search guides and videos…"></label>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty">No items match your search.</div>
+
+  <section class="files" id="files" aria-label="All downloads">
+    <h2>All downloads</h2>
+    <p>The document register: every PDF (-D) and video (-V) with its unique document number. Click a name to open it, or Download to save a copy.</p>
+    <div class="tw"><table><thead><tr><th>Doc No</th><th>Name</th><th>Type</th><th>Length</th><th>Size</th><th>Download</th></tr></thead><tbody id="ftable"></tbody></table></div>
+  </section>
+
+  <section class="about" id="about" aria-label="How to use this portal">
+    <div><h3>New employees</h3><p>Start with the Employee Orientation Guide, then the Service Training Manual and its video. Sign the acknowledgement pages and hand them to your manager.</p></div>
+    <div><h3>Branch teams</h3><p>Follow the Clinic SOP Handbook every day. Use the Before &amp; After Case Handbook to document every treatment case the same way.</p></div>
+    <div><h3>Patients</h3><p>Share the Hair or Skin Treatment Aftercare guide and video after each procedure, along with the clinic's written instructions.</p></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap fgrid">
+    <div class="flogos">
+      <img class="rp" src="assets/logos/renew-plus.png" alt="Renew+ Hair and Skin Care">
+      <img class="rg" src="assets/logos/renew-group.png" alt="Renew Group of Companies">
+    </div>
+    <div class="partner">
+      <div><small>Technology Partner</small><b>Zelora Infotech</b></div>
+      <img src="assets/logos/zelora-infotech.png" alt="Zelora Infotech">
+    </div>
+  </div>
+  <div class="wrap copy">
+    <span>© <span id="yr">2026</span> Renew Group of Companies · Renew+ Hair &amp; Skin Care</span>
+    <span>Phone / WhatsApp +91 90800 86365 · <a href="https://renewhairandskincare.com" target="_blank" rel="noopener">renewhairandskincare.com</a></span>
+  </div>
+</footer>
+
+<dialog id="player" aria-label="Video player">
+  <div class="dhead"><b id="ptitle">Video</b><button class="x" id="pclose" aria-label="Close video">×</button></div>
+  <video id="pvideo" controls playsinline preload="none"></video>
+</dialog>
+
+<script>
+const ITEMS = __ITEMS__;
+const TAGCLASS = {staff:'t-staff', ops:'t-ops', patient:'t-patient', clinical:'t-clinical'};
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ICON = {
+  doc:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>',
+  dl:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M4 20h16"/></svg>',
+  play:'<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>'
+};
+let filter = 'all', q = '';
+function render(){
+  const list = ITEMS.filter(i => (filter==='all' || i.cat===filter) && (!q || (i.title+' '+i.desc+' '+i.tag+' '+i.docno+' '+(i.pdfNo||'')+' '+(i.vidNo||'')).toLowerCase().includes(q)));
+  document.getElementById('grid').innerHTML = list.map(i => {
+    const idx = ITEMS.indexOf(i);
+    const pdf = i.pdf ? 'docs/' + i.pdf + '.pdf' : '';
+    const vfile = i.video ? 'videos/' + i.video + '.mp4' : '';
+    const docCell = i.pdf ? `<a class="doc" href="${pdf}" target="_blank" rel="noopener" aria-label="Open ${esc(i.title)} PDF"><img src="assets/posters/${i.pdf}.jpg" alt="" loading="lazy"></a>` : '';
+    const vidCell = i.video ? `<button class="vid" data-v="${idx}" aria-label="Play ${esc(i.title)} video"><img src="assets/posters/${i.video}.jpg" alt="" loading="lazy"><span class="play">${ICON.play.replace('currentColor','#0d4a3a')}</span><span class="dur">${i.dur}</span></button>` : '';
+    const strip = i.index ? `<details class="idx"><summary>Page index (${i.index.length})</summary><div class="strip">${i.index.map(([p,l]) =>
+        `<a class="pg" href="${pdf}#page=${p}" target="_blank" rel="noopener"><img src="assets/pages/${i.pdf}/${p}.jpg" alt="" loading="lazy"><b>Page ${p}</b><span>${esc(l)}</span></a>`).join('')}</div></details>` : '';
+    const fmt = t => Math.floor(t / 60) + ':' + String(Math.floor(t % 60)).padStart(2, '0');
+    const vstrip = i.chapters ? `<details class="idx"><summary>Video index (${i.chapters.length} chapters)</summary><div class="strip">${i.chapters.map(([t,l], n) =>
+        `<button class="vc" data-v="${idx}" data-t="${t}"><img src="assets/chapters/${i.video}/${n + 1}.jpg" alt="" loading="lazy"><b>${fmt(t)}</b><span>${esc(l)}</span></button>`).join('')}</div></details>` : '';
+    return `<article class="card" id="${i.docno}">
+      <div class="media ${i.video && i.pdf ? '' : 'only'}">${docCell}${vidCell}</div>
+      <div class="cbody">
+        <div class="nos"><span class="tag ${TAGCLASS[i.cat]}">${esc(i.tag)}</span>${i.pdfNo ? `<span class="dno" title="PDF document number">${i.pdfNo}</span>` : ''}${i.vidNo ? `<span class="dno" title="Video document number">${i.vidNo}</span>` : ''}</div>
+        <h3>${esc(i.title)}</h3>
+        <p>${esc(i.desc)}</p>
+        <div class="meta">${i.pdf ? `<span>PDF · ${i.pages} pages · ${i.pdfSize}</span>` : ''}${i.video ? `<span>Video · ${i.dur} · ${i.vidSize}</span>` : ''}</div>
+        <div class="acts">
+          ${i.pdf ? `<a class="btn p" href="${pdf}" target="_blank" rel="noopener">${ICON.doc}Open PDF</a>` : ''}
+          ${i.video ? `<button class="btn v" data-v="${idx}">${ICON.play}Watch video</button>` : ''}
+          ${i.pdf ? `<a class="btn s" href="${pdf}" download>${ICON.dl}PDF</a>` : ''}
+          ${i.video ? `<a class="btn s" href="${vfile}" download>${ICON.dl}Video</a>` : ''}
+        </div>
+        ${strip}
+        ${vstrip}
+      </div>
+    </article>`;
+  }).join('');
+  document.getElementById('empty').style.display = list.length ? 'none' : 'block';
+  document.querySelectorAll('#grid [data-v]').forEach(b => b.addEventListener('click', () => play(+b.dataset.v, +(b.dataset.t || 0))));
+}
+function setFilter(f){
+  filter = f;
+  document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c.dataset.f === f ? 'true' : 'false'));
+  render();
+}
+const dlg = document.getElementById('player'), vid = document.getElementById('pvideo');
+function play(i, t){
+  const it = ITEMS[i];
+  document.getElementById('ptitle').textContent = it.title;
+  vid.src = 'videos/' + it.video + '.mp4';
+  vid.poster = 'assets/posters/' + it.video + '.jpg';
+  vid.preload = 'auto';
+  dlg.showModal();
+  vid.addEventListener('loadedmetadata', () => { if (t) vid.currentTime = t; vid.play().catch(() => {}); }, { once: true });
+  vid.load();
+}
+function closeP(){ vid.pause(); vid.removeAttribute('src'); vid.load(); dlg.close(); }
+document.getElementById('pclose').addEventListener('click', closeP);
+dlg.addEventListener('click', e => { if (e.target === dlg) closeP(); });
+dlg.addEventListener('cancel', e => { e.preventDefault(); closeP(); });
+document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => setFilter(c.dataset.f)));
+document.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', () => setFilter(a.dataset.jump)));
+document.getElementById('q').addEventListener('input', e => { q = e.target.value.trim().toLowerCase(); render(); });
+document.getElementById('ftable').innerHTML = ITEMS.flatMap(i => [
+  i.pdf ? `<tr><td><span class="dno">${i.pdfNo}</span></td><td><a href="docs/${i.pdf}.pdf" target="_blank" rel="noopener">${esc(i.title)}</a></td><td>PDF</td><td>${i.pages} pages</td><td>${i.pdfSize}</td><td><a href="docs/${i.pdf}.pdf" download>Download PDF</a></td></tr>` : '',
+  i.video ? `<tr><td><span class="dno">${i.vidNo}</span></td><td><a href="#${i.docno}" data-v="${ITEMS.indexOf(i)}">${esc(i.title)} – video</a></td><td>Video (MP4)</td><td>${i.dur}</td><td>${i.vidSize}</td><td><a href="videos/${i.video}.mp4" download>Download video</a></td></tr>` : ''
+]).join('');
+document.querySelectorAll('#ftable [data-v]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); play(+a.dataset.v); }));
+document.getElementById('nDocs').textContent = ITEMS.filter(i => i.pdf).length;
+document.getElementById('nVids').textContent = ITEMS.filter(i => i.video).length;
+document.getElementById('yr').textContent = new Date().getFullYear();
+render();
+</script>
+</body>
+</html>

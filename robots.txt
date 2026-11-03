@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://renewsankar.github.io/renew-plus-training-portal/sitemap.xml
